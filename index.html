@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUDS System</title>
+  <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="./CSS/all.min.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+
+<body>
+
+
+
+  <div class="container">
+    <h1 class="text-center pt-4 text-light">CRUDS System</h1>
+    <section class="py-5  mb-3">
+
+      <div class="form-floating mb-3  ">
+        <input oninput="validation(nameRegex,ProudectName )" type="text" class="form-control  " id="ProudectName"
+          placeholder="Proudect Name">
+        <p class="mx-2 fs-5 text-danger d-none"> <i class="fa-solid fa-circle-exclamation"></i> please enter valid data
+        </p>
+
+        <label for="ProudectName">Proudect Name:</label>
+      </div>
+
+      <div class="form-floating mb-3    ">
+        <input oninput="validation(priceRegex,ProudectPrice)" type="number" class="form-control  " id="ProudectPrice"
+          placeholder="Proudect Price">
+        <p class="mx-2 fs-5 text-danger d-none"> <i class="fa-solid fa-circle-exclamation"></i> please enter valid data
+        </p>
+
+        <label for="ProudectPrice">Proudect Price:</label>
+      </div>
+      <div class="form-floating mb-3   ">
+        <input oninput="validation(catRegex,ProudectCat)" list="list" type="text" class="form-control " id="ProudectCat"
+          placeholder="Proudect Categrie">
+        <p class="mx-2 fs-5 text-danger d-none"> <i class="fa-solid fa-circle-exclamation"></i> please enter valid data
+        </p>
+
+        <label for="ProudectCategrie">Proudect Categrie:</label>
+        <datalist id=list>
+          <option value="TV" />
+          <option value="Phones" />
+          <option value="electronics" />
+          <option value="smart watch" />
+        </datalist>
+      </div>
+
+
+      <div class="form-floating mb-3   ">
+        <textarea oninput="validation(desRegex,ProductDes)" class="form-control " placeholder="Producr Descrition"
+          id="ProductDes"></textarea>
+        <p class="mx-2 fs-5 text-danger d-none"> <i class="fa-solid fa-circle-exclamation"></i> please enter valid data
+        </p>
+
+        <label for="ProductDescrition">Product Descrition:</label>
+      </div>
+
+      <div class="form-floating mb-3 ">
+        <input type="file" class="form-control " id="Proudectimg" placeholder="Proudect img">
+        <label for="Proudectimg"> Proudect img:</label>
+
+      </div>
+
+      <button id="btn" class="btn btn-dark text-success  mt-2">Add Proudect</button>
+      <button id="upbtn" class="btn btn-outline-primary d-none mt-2">Updata Proudect</button>
+
+
+      <input type="text" class="form-control w-50 mx-auto " id="search" placeholder="Search by name .....">
+
+
+
+    </section>
+
+
+
+    <div class="container ">
+
+      <div id="row" class="row g-3 pb-5">
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script src="js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+
+
+
+
+
+
+</html>
